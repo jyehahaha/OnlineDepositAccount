@@ -5,7 +5,9 @@
 	import Select from "./components/forms/Select.svelte";
 	import Number from "./components/forms/Number.svelte";
 	import Date from "./components/forms/Date.svelte";
-	import { update_keyed_each } from "svelte/internal";
+	import {
+		update_keyed_each
+	} from "svelte/internal";
 
 	let output = {
 		full_name: "",
@@ -71,8 +73,7 @@
 	let step = 1;
 	let last_step = 7;
 
-	let id_type_options = [
-		{
+	let id_type_options = [{
 			label: "Mykad",
 		},
 		{
@@ -89,8 +90,7 @@
 		},
 	];
 
-	let nationality_options = [
-		{
+	let nationality_options = [{
 			label: "AFGHANISTAN",
 		},
 		{
@@ -839,8 +839,7 @@
 		},
 	];
 
-	let pr_status_options = [
-		{
+	let pr_status_options = [{
 			label: "No PR",
 		},
 		{
@@ -848,8 +847,7 @@
 		},
 	];
 
-	let educations_detail_options = [
-		{
+	let educations_detail_options = [{
 			label: "NONE",
 		},
 		{
@@ -881,8 +879,7 @@
 		},
 	];
 
-	let occupation_options = [
-		{
+	let occupation_options = [{
 			label: "Other Outside Labour Force",
 		},
 		{
@@ -907,8 +904,7 @@
 			label: "Craft and Related Trades Workers",
 		},
 		{
-			label:
-				"Skilled Agricultural, Forestry, Livestock and Fishery Workers",
+			label: "Skilled Agricultural, Forestry, Livestock and Fishery Workers",
 		},
 		{
 			label: "Service and Sales Workers",
@@ -1020,8 +1016,7 @@
 		},
 	];
 
-	let job_title_options = [
-		{
+	let job_title_options = [{
 			label: "UNIFORM PERSONNEL",
 		},
 		{
@@ -1101,16 +1096,14 @@
 		},
 	];
 
-	let bmmb_staff_options = [
-		{
+	let bmmb_staff_options = [{
 			label: "No",
 		},
 		{
 			label: "Yes",
 		},
 	];
-	let employment_type_options = [
-		{
+	let employment_type_options = [{
 			label: "Employer",
 		},
 		{
@@ -1126,8 +1119,7 @@
 			label: "Outside Labour Force",
 		},
 	];
-	let employment_sector_options = [
-		{
+	let employment_sector_options = [{
 			label: "Agriculture, Forestry & Fishing",
 		},
 		{
@@ -1155,8 +1147,7 @@
 			label: "Not Applicable",
 		},
 	];
-	let nature_of_business_options = [
-		{
+	let nature_of_business_options = [{
 			label: "OTHERS",
 		},
 		{
@@ -1269,8 +1260,7 @@
 		},
 	];
 
-	let bmmb_high_net_worth_options = [
-		{
+	let bmmb_high_net_worth_options = [{
 			label: "Yes",
 		},
 		{
@@ -1278,8 +1268,7 @@
 		},
 	];
 
-	let pep_related_options = [
-		{
+	let pep_related_options = [{
 			label: "Yes",
 		},
 		{
@@ -1287,8 +1276,7 @@
 		},
 	];
 
-	let property_ownership_options = [
-		{
+	let property_ownership_options = [{
 			label: "UNKNOWN",
 		},
 		{
@@ -1311,8 +1299,7 @@
 		},
 	];
 
-	let race_options = [
-		{
+	let race_options = [{
 			label: "MALAY",
 		},
 		{
@@ -1332,8 +1319,7 @@
 		},
 	];
 
-	let gender_options = [
-		{
+	let gender_options = [{
 			label: "Male",
 		},
 		{
@@ -1341,8 +1327,7 @@
 		},
 	];
 
-	let maritial_status_options = [
-		{
+	let maritial_status_options = [{
 			label: "UNKNOWN",
 		},
 		{
@@ -1362,8 +1347,7 @@
 		},
 	];
 
-	let contact_relationship_options = [
-		{
+	let contact_relationship_options = [{
 			label: "Father",
 		},
 		{
@@ -1377,8 +1361,7 @@
 		},
 	];
 
-	let bmmb_account_type_options = [
-		{
+	let bmmb_account_type_options = [{
 			label: "Saving Account (SA)",
 		},
 		{
@@ -1389,8 +1372,7 @@
 		},
 	];
 
-	let purpose_of_account_options = [
-		{
+	let purpose_of_account_options = [{
 			label: "Payroll/Saving",
 		},
 		{
@@ -1407,8 +1389,7 @@
 		},
 	];
 
-	let product_to_open_options = [
-		{
+	let product_to_open_options = [{
 			label: "SA MuSS",
 		},
 		{
@@ -1416,8 +1397,7 @@
 		},
 	];
 
-	let prefered_branch_options = [
-		{
+	let prefered_branch_options = [{
 			label: "(ALOR SETAR) SOUQ AL BUKHARY",
 		},
 		{
@@ -1891,37 +1871,37 @@
 	// }
 
 	$: form_display.id_number.display =
-		form_display.type_of_id.display && output.type_of_id != "passport"
-			? true
-			: false;
+		form_display.type_of_id.display && output.type_of_id != "passport" ?
+		true :
+		false;
 
 	$: form_display.passport_number.display =
-		form_display.type_of_id.display && output.type_of_id == "passport"
-			? true
-			: false;
+		form_display.type_of_id.display && output.type_of_id == "passport" ?
+		true :
+		false;
 
 	$: form_display.nationality.disable =
-		form_display.type_of_id.display && output.type_of_id != "passport"
-			? true
-			: false;
+		form_display.type_of_id.display && output.type_of_id != "passport" ?
+		true :
+		false;
 
 	$: form_display.pr_status.display =
 		form_display.id_number.display &&
-		!(output.type_of_id == "mypr" || output.type_of_id == "passport")
-			? true
-			: false;
+		!(output.type_of_id == "mypr" || output.type_of_id == "passport") ?
+		true :
+		false;
 	$: form_display.pr_id_number.display =
-		form_display.id_number.display && output.pr_status == "foreign pr"
-			? true
-			: false;
+		form_display.id_number.display && output.pr_status == "foreign pr" ?
+		true :
+		false;
 	$: form_display.pr_country.display =
-		form_display.id_number.display && output.pr_status == "foreign pr"
-			? true
-			: false;
+		form_display.id_number.display && output.pr_status == "foreign pr" ?
+		true :
+		false;
 	$: form_display.date_of_birth.disable =
-		form_display.id_number.display && output.type_of_id != "passport"
-			? true
-			: false;
+		form_display.id_number.display && output.type_of_id != "passport" ?
+		true :
+		false;
 
 	let dob = "";
 	$: if (form_display.date_of_birth.display && output.id_number.length >= 6) {
@@ -2105,10 +2085,7 @@
 </script>
 
 <svelte:head>
-	<link
-		rel="stylesheet"
-		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-	/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </svelte:head>
 
 <div class="container-fluid mt-3">
@@ -2116,9 +2093,9 @@
 		<div class="offset-2 col-8">
 			<div class="card">
 				<div class="card-body">
-					<h1 class="card-title">Saving Application Application</h1>
-					<h4 class="card-text">Basic Informations</h4>
-		
+					<h2 class="card-title">Saving Account Application</h2>
+					<h4 class="card-text">Basic Information</h4>
+
 					<div class="row">
 						<div class="col-md-6">
 							<p>Are you a US Citizen or US Indicia:</p>
@@ -2128,64 +2105,67 @@
 						<div class="col-md-6">
 							<div class="form-check">
 								<label class="form-check-label">
-								<input type="radio" class="form-check-input" name="RadioBtnCitizen" id="citizenYes" value="checkedValue" checked>
-								Yes
-							  </label>
+									<input type="radio" class="form-check-input" name="RadioBtnCitizen" id="citizenYes"
+										value="checkedValue" checked>
+									Yes
+								</label>
 							</div>
 							<div class="form-check">
 								<label class="form-check-label">
-								<input type="radio" class="form-check-input" name="RadioBtnCitizen" id="citizenNo" value="checkedValue" checked>
-								No
-							  </label>
+									<input type="radio" class="form-check-input" name="RadioBtnCitizen" id="citizenNo"
+										value="checkedValue" checked>
+									No
+								</label>
 							</div>
 						</div>
 					</div>
 					<div class="row mt-3">
 						<div class="col-12">
 							<div class="form-group">
-							  <label for="">Full Name</label>
-							  <input type="text" name="txtName" id="name" class="form-control" placeholder="Full Name">
-							  <small id="helpId" class="form-text text-muted"> Please ensure name as per MyKad</small>
+								<label for="">Full Name</label>
+								<input type="text" name="txtName" id="name" class="form-control"
+									placeholder="Full Name">
+								<small id="helpId" class="form-text text-muted"> Please ensure name as per MyKad</small>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-6">
 							<div class="form-group">
-							  <label for="">Type of Identification</label>
-							  <select class="form-control" name="SelectID" id="typeofId">
-								<option>MyKad</option>
-								<option>Army Personnel</option>
-								<option>Police Personnel</option>
-								<option>My PR</option>
-								<option>Passport</option>
-							  </select>
+								<label for="">Type of Identification</label>
+								<select class="form-control" name="SelectID" id="typeofId">
+									<option>MyKad</option>
+									<option>Army Personnel</option>
+									<option>Police Personnel</option>
+									<option>My PR</option>
+									<option>Passport</option>
+								</select>
 							</div>
 						</div>
 						<div class="col-6">
 							<div class="form-group">
 								<label for="">ID Number</label>
-								<input type="text" name="txtIdNumber" id="idNumber" class="form-control" placeholder="Full Name">
-							  </div>
+								<input type="text" name="txtIdNumber" id="idNumber" class="form-control"
+									placeholder="Full Name">
+							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-6">
 							<div class="form-group">
-							  <label for="">Nationality</label>
-							  <select class="form-control" name="selectNationality" id="nationality">
-								<option>--Please Select--</option>
-								<option>AFGHANISTAN</option>
-								<option>MALAYSIA</option>
-							  </select>
+								<label for="">Nationality</label>
+								<select class="form-control" name="selectNationality" id="nationality">
+									<option>--Please Select--</option>
+									<option>AFGHANISTAN</option>
+									<option>MALAYSIA</option>
+								</select>
 							</div>
 						</div>
 						<div class="col-6">
 							<div class="form-group">
 								<label for="">Date of Birth</label>
-								<input type="text"
-								  class="form-control" name="txtDOB" id="DOB" placeholder="">
-							  </div>
+								<input type="text" class="form-control" name="txtDOB" id="DOB" placeholder="">
+							</div>
 						</div>
 					</div>
 					<div class="row mt-3">
@@ -2201,97 +2181,99 @@
 		<div class="offset-2 col-8">
 			<div class="card">
 				<div class="card-body">
-					<h2 class="card-text">Employment Details</h2>
+					<h4 class="card-text">Employment Details</h4>
 
 					<div class="row">
 						<div class="col-12">
 							<div class="form-group">
-							  <label for="">Educational Level</label>
-							  <select class="form-control" name="eduLevel" id="eduLevel">
-								<option>--Please Select--</option>
-								<option>Primary</option>
-								<option>Secondary</option>
-								<option>Certificate</option>
-								<option>Pre-University</option>
-								<option>Diploma</option>
-								<option>Degree</option>
-								<option>Master</option>
-								<option>Doctorate</option>
-								<option>Professional</option>
-							  </select>
+								<label for="">Educational Level</label>
+								<select class="form-control" name="eduLevel" id="eduLevel">
+									<option>--Please Select--</option>
+									<option>Primary</option>
+									<option>Secondary</option>
+									<option>Certificate</option>
+									<option>Pre-University</option>
+									<option>Diploma</option>
+									<option>Degree</option>
+									<option>Master</option>
+									<option>Doctorate</option>
+									<option>Professional</option>
+								</select>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-6">
 							<div class="form-group">
-							  <label for="">Occupation</label>
-							  <select class="form-control" name="occupation" id="occupation">
-								<option>--Please Select--</option>
-								<option>Accountant</option>
-								<option>Housewife/Househusband</option>
-							  </select>
+								<label for="">Occupation</label>
+								<select class="form-control" name="occupation" id="occupation">
+									<option>--Please Select--</option>
+									<option>Accountant</option>
+									<option>Housewife/Househusband</option>
+								</select>
 							</div>
 						</div>
 						<div class="col-6">
 							<div class="form-group">
 								<label for="">Job Title</label>
 								<select class="form-control" name="occupation" id="occupation">
-								  <option>--Please Select--</option>
-								  <option>Officer</option>
-								  <option>Manager</option>
-								  <option>Professional</option>
+									<option>--Please Select--</option>
+									<option>Officer</option>
+									<option>Manager</option>
+									<option>Professional</option>
 								</select>
-							  </div>
+							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-6">
-							<p>BMMB Staff?</p>
+							<p>Are you a BMMB Staff?</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-								<input type="radio" class="form-check-input" name="RadioBtnCitizen" id="citizenYes" value="checkedValue" checked>
-								Yes
-							  </label>
+									<input type="radio" class="form-check-input" name="RadioBtnCitizen" id="citizenYes"
+										value="checkedValue" checked>
+									Yes
+								</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-								<input type="radio" class="form-check-input" name="RadioBtnCitizen" id="citizenNo" value="checkedValue" checked>
-								No
-							  </label>
+									<input type="radio" class="form-check-input" name="RadioBtnCitizen" id="citizenNo"
+										value="checkedValue" checked>
+									No
+								</label>
 							</div>
 						</div>
 					</div>
 					<div class="row mt-3">
 						<div class="col-12">
 							<div class="form-group">
-							  <label for="">BMMB Staff ID:</label>
-							  <input type="text"
-								class="form-control" name="txtStaffID" id="staffID" placeholder="BMMB Staff ID">
+								<label for="">BMMB Staff ID:</label>
+								<input type="text" class="form-control" name="txtStaffID" id="staffID"
+									placeholder="BMMB Staff ID">
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-6">
 							<div class="form-group">
-								<label for="">Monthly Basic Salary:</label>
-								<input type="text"
-								  class="form-control" name="txtStaffSalary" id="staffBasicSalary" placeholder="Monthly Basic Salary">
-							  </div>
+								<label for="">Monthly Basic Salary (RM)</label>
+								<input type="number" class="form-control" name="txtStaffSalary" id="staffBasicSalary"
+									placeholder="Monthly Basic Salary">
+							</div>
 						</div>
 						<div class="col-6">
 							<div class="form-group">
-								<label for="">Monthly Other Salary:</label>
-								<input type="text"
-								  class="form-control" name="txtStaffCommitment" id="StaffCommitment" placeholder="Monthly Other Salary">
-							  </div>
+								<label for="">Monthly Other Income (RM)</label>
+								<input type="number" class="form-control" name="txtStaffCommitment" id="StaffCommitment"
+									placeholder="Monthly Other Salary">
+							</div>
 						</div>
 					</div>
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-12">
 							<div class="form-group">
 							  <label for="">No. of Other Banks Used:</label>
@@ -2299,62 +2281,459 @@
 								class="form-control" name="txtNoOfBankUsed" id="noOfBankUsed" placeholder="No. of Other Banks Used:">
 								</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="row">
 						<div class="col-6">
 							<div class="form-group">
-								<label for="">Employment Type:</label>
-								<input type="text"
-								  class="form-control" name="txtEmploymentType" id="employmentType" placeholder="Employment Type">
-							  </div>
+								<label for="">Employment Type</label>
+								<input type="text" class="form-control" name="txtEmploymentType" id="employmentType"
+									placeholder="Employment Type">
+							</div>
 						</div>
 						<div class="col-6">
 							<div class="form-group">
-								<label for="">Employment Sector:</label>
-								<input type="text"
-								  class="form-control" name="txtEmploymentSector" id="employmentSector" placeholder="Employment Sectory">
-							  </div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-6">
-							<div class="form-group">
-								<label for="">Monthly Basic Salary:</label>
-								<input type="text"
-								  class="form-control" name="txtSalary" id="basicSalary" placeholder="Monthly Basic Salary">
-							  </div>
-						</div>
-						<div class="col-6">
-							<div class="form-group">
-								<label for="">Monthly Other Salary:</label>
-								<input type="text"
-								  class="form-control" name="txtCommitment" id="Commitment" placeholder="Monthly Other Salary">
-							  </div>
+								<label for="">Employment Sector</label>
+								<input type="text" class="form-control" name="txtEmploymentSector" id="employmentSector"
+									placeholder="Employment Sectory">
+							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-6">
 							<div class="form-group">
-								<label for="">Employer Name:</label>
-								<input type="text"
-								  class="form-control" name="txtEmployerName" id="employerName" placeholder="Employer Name">
-							  </div>
+								<label for="">Monthly Basic Salary (RM)</label>
+								<input type="number" class="form-control" name="txtSalary" id="basicSalary"
+									placeholder="Monthly Basic Salary">
+							</div>
 						</div>
 						<div class="col-6">
 							<div class="form-group">
-								<label for="">Nature of Business:</label>
-								<input type="text"
-								  class="form-control" name="txtnatureOfBusiness" id="natureOfBusiness" placeholder="Nature of Business">
-							  </div>
+								<label for="">Monthly Other Income (RM)</label>
+								<input type="number" class="form-control" name="txtCommitment" id="Commitment"
+									placeholder="Monthly Other Salary">
+							</div>
 						</div>
 					</div>
 					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Employer Name</label>
+								<input type="text" class="form-control" name="txtEmployerName" id="employerName"
+									placeholder="Employer Name">
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Nature of Business</label>
+								<input type="text" class="form-control" name="txtnatureOfBusiness" id="natureOfBusiness"
+									placeholder="Nature of Business">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<a name="btnPrevious" id="Previous" class="btn btn-warning" href="#"
+								role="button">Previous</a>
+							<a name="btnNext" id="Next" class="btn btn-primary" href="#" role="button">Next</a>
+						</div>
+					</div>
+					<!-- <div class="row">
 						<div class="col-12">
 							<div class="form-group">
 							  <label for="">No. of Other Banks Used:</label>
 							  <input type="text"
 								class="form-control" name="txtNoOfBankUsed" id="noOfBankUsed" placeholder="No. of Other Banks Used:">
 								</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row mt-3">
+		<div class="offset-2 col-8">
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-title">Address Details</h4>
+					<div class="row">
+						<div class="col-6">
+							<p>Are you one of BMMB High Net Worth customer?</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-check form-check-inline">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="RadioBtnHighNetCustomer"
+										id="highNetWorthYes" value="checkedValue" checked>
+									Yes
+								</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="RadioBtnHighNetCustomer"
+										id="highNetWorthNo" value="checkedValue" checked>
+									No
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="col-12">
+							<p>Are you a Political Expose Person(PEP) or a Family Member(s) of PEP or Related Close
+								Associate(s) of PEP</p>
+						</div>
+					</div>
+					<div class="row mb-2">
+						<div class="col-md-6">
+							<div class="form-check form-check-inline">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="RadioBtnPoliticalExposePerson"
+										id="PoliticalExposePersonYes" value="checkedValue" checked>
+									Yes
+								</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="RadioBtnPoliticalExposePerson"
+										id="PoliticalExposePersonNo" value="checkedValue" checked>
+									No
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-12">
+							<p><strong>Residental Address</strong></p>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="col-12">
+							<div class="form-group">
+								<label for="">Address</label>
+								<input type="text" class="form-control" name="txtAddress" id="Address1"
+									placeholder="Address">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-group">
+								<input type="text" class="form-control" name="txtAddress" id="Address2"
+									placeholder="Address">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Postal Code</label>
+							  <input type="text"
+								class="form-control" name="txtPostalCode" id="postalCode" placeholder="Postal Code">
+			
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">City</label>
+							  <input type="text"
+								class="form-control" name="txtCity" id="city" placeholder="City">
+			
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">State</label>
+							  <input type="text"
+								class="form-control" name="txtState" id="state" placeholder="State">
+			
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Country</label>
+							  <input type="text"
+								class="form-control" name="txtCountry" id="country" placeholder="Country">
+			
+							</div>
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-12">
+							<p><strong>Foreign Address</strong></p>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="col-12">
+							<div class="form-group">
+								<label for="">Foreign Address</label>
+								<input type="text" class="form-control" name="txtForeignAddress" id="foreignAddress1"
+									placeholder="Address">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-group">
+								<input type="text" class="form-control" name="txtForeignAddress" id="foreignAddress2"
+									placeholder="Address">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Foreign Postal Code</label>
+							  <input type="text"
+								class="form-control" name="txtForeignPostalCode" id="ForeignPostalCode" placeholder="Postal Code">
+			
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Foreign City</label>
+							  <input type="text"
+								class="form-control" name="txtForeignCity" id="foreignCity" placeholder="City">
+			
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Foreign State</label>
+							  <input type="text"
+								class="form-control" name="txtForeignState" id="foreignState" placeholder="State">
+			
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Foreign Country</label>
+							  <input type="text"
+								class="form-control" name="txtForeignCountry" id="foreignCountry" placeholder="Country">
+			
+							</div>
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-12">
+							<p><strong>Correspondent Address</strong></p>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-6">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="addressSame">
+								<label class="form-check-label">Correspondent Address same as Residental Address</label>
+							  </div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="col-12">
+							<div class="form-group">
+								<label for="">Correspondent Address</label>
+								<input type="text" class="form-control" name="txtCorrespondentAddress" id="correspondentAddress1"
+									placeholder="Address">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-group">
+								<input type="text" class="form-control" name="txtCorrespondentAddress" id="correspondentAddress2"
+									placeholder="Address">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Correspondent Postal Code</label>
+							  <input type="text"
+								class="form-control" name="txtCorrespondentPostalCode" id="correspondentPostalCode" placeholder="Postal Code">
+			
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">CorrespondentCity</label>
+							  <input type="text"
+								class="form-control" name="txtCorrespondentCity" id="correspondentCity" placeholder="City">
+			
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Correspondent State</label>
+							  <input type="text"
+								class="form-control" name="txtCorrespondentState" id="correspondentState" placeholder="State">
+			
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+							  <label for="">Correspondent Country</label>
+							  <input type="text"
+								class="form-control" name="txtCorrespondentCountry" id="correspondentCountry" placeholder="Country">
+			
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="form-group">
+							  <label for="">Property Ownership</label>
+							  <select class="form-control" name="selectPropertyOwnsership" id="propertyOwnsership">
+								<option>OWNED</option>
+								<option>RENTED</option>
+							  </select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<a name="btnPrevious" id="Previous" class="btn btn-warning" href="#"
+								role="button">Previous</a>
+							<a name="btnNext" id="Next" class="btn btn-primary" href="#" role="button">Next</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row mt-3">
+		<div class="offset-2 col-8">
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-text">Additional Information</h4>
+					<div class="row">
+						<div class="col-12">
+							<div class="form-group">
+							  <label for="">Constitution</label>
+							  <input type="text"
+								class="form-control" name="txtConstitution" id="constitution">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Mobile Phone</label>
+								<input type="number"
+								  class="form-control" name="txtMobilePhone" id="mobilePhone">
+							  </div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Office Number</label>
+								<input type="number"
+								  class="form-control" name="txtOfficePhone" id="officeNumber">
+							  </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="form-group">
+							  <label for="">Email Address</label>
+							  <input type="email"
+								class="form-control" name="txtEmailAddress" id="emailAddress" placeholder="test@gmail.com">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Race</label>
+								<select class="form-control" name="selectRace" id="race">
+									<option>--Please Select--</option>
+									<option>Malay</option>
+									<option>Chinese</option>
+									<option>Indian</option>
+									<option>Others</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Gender</label>
+								<select class="form-control" name="selectGender" id="gender">
+									<option>--Please Select--</option>
+									<option>Male</option>
+									<option>Female</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Marital Status</label>
+								<select class="form-control" name="selectMaritalStatus" id="maritalStatus">
+									<option>--Please Select--</option>
+									<option>Single</option>
+									<option>Maried</option>
+									<option>Widowed</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">No of Dependents</label>
+								<input type="text" class="form-control" name="txtDependents" id="dependents"
+									placeholder="No of Dependents">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<a name="btnPrevious" id="Previous" class="btn btn-warning" href="#"
+								role="button">Previous</a>
+							<a name="btnNext" id="Next" class="btn btn-primary" href="#" role="button">Next</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row mt-3">
+		<div class="offset-2 col-8">
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-text">Emergency Contact Person Details</h4>
+					<div class="row">
+						<div class="col-12">
+							<div class="form-group">
+							  <label for="">Contact Person Name</label>
+							  <input type="text"
+								class="form-control" name="txtContactPerson" id="contactPersonName">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Relationship</label>
+								<select class="form-control" name="selectRelationship" id="relationship">
+									<option>--Please Select--</option>
+									<option>Mother</option>
+									<option>Father</option>
+									<option>Sibling</option>
+									<option>Others</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Contact Person Mobile Number</label>
+								<input type="number"
+								  class="form-control" name="txtContactMobilenumber" id="conatctMobileNumber">
+							  </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<a name="btnPrevious" id="Previous" class="btn btn-warning" href="#"
+								role="button">Previous</a>
+							<a name="btnNext" id="Next" class="btn btn-primary" href="#" role="button">Next</a>
 						</div>
 					</div>
 				</div>
